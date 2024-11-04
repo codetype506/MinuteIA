@@ -1,0 +1,18 @@
+
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile  # Asegúrate de que el nombre sea correcto
+    ports:
+      - "5000:5000"
+      - "8888:8888"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+    command: >
+      bash -c "flask run --host=0.0.0.0 && 
+               jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser"
