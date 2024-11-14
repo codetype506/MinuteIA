@@ -37,7 +37,7 @@
                         <a href="uploadMinuta.html">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Edicion de Minuta</a>
+                        <a href="editMinuta.html">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="analisisMinuta.html">Seleccion de Analisis</a>
@@ -59,11 +59,28 @@
             <main class="main">
                 <div class="main_cards">
                     <div class="card">
-                        <span>Minuta</span>
-                        <form action="/ruta" method="POST">
-                            <textarea id="editMinuta" name="editMinuta" rows="48" cols="155"></textarea> 
-                        </form>
+                        <span>Documentos Adicionales</span>
+                        <div id="document-container">
+
+                        </div> 
+                        
                        
+                    </div>
+                    <div class="card">
+                        <form action="/ruta" method="POST" enctype="multipart/form-data">
+                            <!-- Input de archivo oculto -->
+                            <input type="file" id="file-upload" name="archivo" style="display: none;">
+                            
+                            <!-- Botón de imagen personalizado -->
+                            <label for="file-upload">
+                                <img src="Imagenes/icons8-subir-100.png" alt="Seleccionar archivo" class="img-button" >
+                            </label>
+                            <br>
+                            <!-- Botón de envío del formulario -->
+                            <button type="submit"> 
+                                Cargar Documentos
+                            </button>
+                        </form>
                     </div>
                 </div>
             </main>
@@ -72,5 +89,6 @@
                 <div class="footer_byline">Made with &hearts;</div> -->
             </footer>
         </div>
+        <script type="text/javascript" src="JS/editJS.js"></script>
     </body>
 </html>
