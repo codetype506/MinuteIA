@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
-        <link rel="stylesheet" type="text/css" href="style/editStyle.css">
-        <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/mainStyle.css') }}">
+        <!-- <link rel="stylesheet" type="text/css" href="style/realTimeStyle.css"> -->
     </head>
     <body>
         <div class="grid-container">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="header_logout">
                     <a href="login.html">
-                        <img src="Imagenes/icons8-cerrar-sesión-24.png" alt="Logout" >
+                        <img src="{{ url_for('static', filename='Imagenes/icons8-cerrar-sesión-24.png') }}" alt="Logout" >
                     </a>
                 </div>
             </header>
@@ -28,60 +28,48 @@
                 </div>
                 <ul class="aside_list">
                     <li class="aside_list-item" >
-                        <a href="mainHub.html">Inicio</a>
+                        <a href="{{ url_for('mainHub') }}">Inicio</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="realTimeMinuta.html">Tiempo Real Minuta</a>
+                        <a href="{{ url_for('realTime') }}">Tiempo Real Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="uploadMinuta.html">Cargar Minuta</a>
+                        <a href="{{ url_for('upload') }}">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Documento Adicional</a>
+                        <a href="{{ url_for('docExtra') }}">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="analisisMinuta.html">Seleccion de Analisis</a>
+                        <a href="{{ url_for('analisis') }}">Seleccion de Analisis</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="resultadosMinuta.html">Resultados</a>
+                        <a href="{{ url_for('resultados') }}">Resultados</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="historialMinutas.html">Historial</a>
+                        <a href="{{ url_for('historial') }}">Historial</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="helpMinuta.html">Ayuda</a>
+                        <a href="{{ url_for('help') }}">Ayuda</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="configMinuta.html">Configuraciones</a>
+                        <a href="{{ url_for('configMinuta') }}">Configuraciones</a>
                     </li>
                 </ul>
             </aside>
             <main class="main">
                 <div class="main_cards">
                     <div class="card">
-                        <span>Documentos Adicionales</span>
-                        <div id="document-container">
-
-                        </div> 
-                        
-                       
+                        <span>Documento</span>
+                       <textarea id="trascripMinuta" name="trascripMinuta" rows="48" cols="150" disabled>
+                        </textarea> 
                     </div>
-                    <div class="card">
-                        <form action="/ruta" method="POST" enctype="multipart/form-data">
-                            <!-- Input de archivo oculto -->
-                            <input type="file" id="file-upload" name="archivo" style="display: none;">
-                            
-                            <!-- Botón de imagen personalizado -->
-                            <label for="file-upload">
-                                <img src="Imagenes/icons8-subir-100.png" alt="Seleccionar archivo" class="img-button" >
-                            </label>
-                            <br>
-                            <!-- Botón de envío del formulario -->
-                            <button type="submit"> 
-                                Cargar Documentos
-                            </button>
+                    <!-- <div class="card">
+                        <form action="/ruta" method="POST">
+                            <input type="image" src="Imagenes/icons8-subir-100.png" alt="Enviar" class="img-button">
                         </form>
-                    </div>
+                        
+                    </div> -->
+                    <!-- <div class="card">Card</div> -->
                 </div>
             </main>
             <footer class="footer">
@@ -89,6 +77,5 @@
                 <div class="footer_byline">Made with &hearts;</div> -->
             </footer>
         </div>
-        <script type="text/javascript" src="JS/editJS.js"></script>
     </body>
 </html>

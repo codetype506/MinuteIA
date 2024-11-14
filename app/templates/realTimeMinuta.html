@@ -4,8 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
-        <link rel="stylesheet" type="text/css" href="style/realTimeStyle.css">
-        <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
+        <!-- <link rel="stylesheet" type="text/css" href="style/realTimeStyle.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/realTimeStyle.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/mainStyle.css') }}">
     </head>
     <body>
         <div class="grid-container">
@@ -18,7 +19,7 @@
                 </div>
                 <div class="header_logout">
                     <a href="login.html">
-                        <img src="Imagenes/icons8-cerrar-sesión-24.png" alt="Logout" >
+                        <img src="{{ url_for('static', filename='Imagenes/icons8-cerrar-sesión-24.png') }}" alt="Logout" >
                     </a>
                 </div>
             </header>
@@ -28,31 +29,31 @@
                 </div>
                 <ul class="aside_list">
                     <li class="aside_list-item" >
-                        <a href="mainHub.html">Inicio</a>
+                        <a href="{{ url_for('mainHub') }}">Inicio</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="realTimeMinuta.html">Tiempo Real Minuta</a>
+                        <a href="{{ url_for('realTime') }}">Tiempo Real Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="uploadMinuta.html">Cargar Minuta</a>
+                        <a href="{{ url_for('upload') }}">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Documento Adicional</a>
+                        <a href="{{ url_for('docExtra') }}">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="analisisMinuta.html">Seleccion de Analisis</a>
+                        <a href="{{ url_for('analisis') }}">Seleccion de Analisis</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="resultadosMinuta.html">Resultados</a>
+                        <a href="{{ url_for('resultados') }}">Resultados</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="historialMinutas.html">Historial</a>
+                        <a href="{{ url_for('historial') }}">Historial</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="helpMinuta.html">Ayuda</a>
+                        <a href="{{ url_for('help') }}">Ayuda</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="configMinuta.html">Configuraciones</a>
+                        <a href="{{ url_for('configMinuta') }}">Configuraciones</a>
                     </li>
                 </ul>
             </aside>
@@ -65,7 +66,7 @@
                     </div>
                     <div class="card">
                         <form action="/ruta" method="POST">
-                            <input type="image" src="Imagenes/icons8-grabar-100.png" alt="Enviar" class="img-button">
+                            <input type="image" src="{{ url_for('static', filename='Imagenes/icons8-grabar-100.png') }}" alt="Enviar" class="img-button">
                         </form>
                         
                     </div>
