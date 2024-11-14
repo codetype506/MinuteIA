@@ -9,7 +9,8 @@ services:
       - "5000:5000"
       - "8888:8888"
     volumes:
-      - .:/app
+      - ./app:/app      # Monta la carpeta de la aplicación para persistencia de archivos
+      - ./html:/app/html 
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.py

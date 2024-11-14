@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
+        <link rel="stylesheet" type="text/css" href="style/analisisStyle.css">
         <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
     </head>
     <body>
         <div class="grid-container">
-            <div class="menu-icon">
+            <!-- <div class="menu-icon">
                 <strong> &#9776;</strong>
-            </div>
+            </div> -->
             <header class="header">
                 <div class="header_search">
                     <input type="text" placeholder="Buscador">
@@ -36,7 +37,7 @@
                         <a href="uploadMinuta.html">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Edicion de Minuta</a>
+                        <a href="editMinuta.html">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="analisisMinuta.html">Seleccion de Analisis</a>
@@ -48,7 +49,7 @@
                         <a href="historialMinutas.html">Historial</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="reportMinuta.html">Ayuda</a>
+                        <a href="helpMinuta.html">Ayuda</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="configMinuta.html">Configuraciones</a>
@@ -56,20 +57,31 @@
                 </ul>
             </aside>
             <main class="main">
-                <div class="main_cards">
-                    <div class="card">
-                        <span>Documento</span>
-                       <textarea id="trascripMinuta" name="trascripMinuta" rows="29" cols="150" disabled>
-                        </textarea> 
+                <div class="main_overview">
+                    <div class="overview_card">
+                        <button class="overview_card-info" onclick="showPopup()">Sentimientos</button>
+                        <div class="overview_card-icon">Info Analisis </div>
                     </div>
-                    
-                    <!-- <div class="card">Card</div> -->
+                    <div class="overview_card">
+                        <button class="overview_card-info">Ideas Principales</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
+                    <div class="overview_card">
+                        <button class="overview_card-info">Resumen Abstracto</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
+                    <div class="overview_card">
+                        <button class="overview_card-info">Elementos de Accion</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
                 </div>
+                
             </main>
             <footer class="footer">
                 <!-- <div class="footer_copyright">&copy;2020</div>
                 <div class="footer_byline">Made with &hearts;</div> -->
             </footer>
         </div>
+        
     </body>
 </html>

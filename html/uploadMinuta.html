@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
-        <link rel="stylesheet" type="text/css" href="style/analisisStyle.css">
+        <link rel="stylesheet" type="text/css" href="style/uploadStyle.css">
         <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
     </head>
     <body>
@@ -37,7 +37,7 @@
                         <a href="uploadMinuta.html">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Edicion de Minuta</a>
+                        <a href="editMinuta.html">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="analisisMinuta.html">Seleccion de Analisis</a>
@@ -57,23 +57,29 @@
                 </ul>
             </aside>
             <main class="main">
-                <div class="main_overview">
-                    <div class="overview_card">
-                        <button class="overview_card-info">Analisis 1</button>
-                        <div class="overview_card-icon">Info Analisis 1</div>
+                <div class="main_cards">
+                    <div class="card">
+                        <span>Minuta</span>
+                       <textarea id="trascripMinuta" name="trascripMinuta" rows="48" cols="155" disabled>
+                        </textarea> 
                     </div>
-                    <div class="overview_card">
-                        <button class="overview_card-info">Analisis 2</button>
-                        <div class="overview_card-icon">Info Analisis 2</div>
+                    <div class="card">
+                        <form action="/ruta" method="POST" enctype="multipart/form-data">
+                            <!-- Input de archivo oculto -->
+                            <input type="file" id="file-upload" name="archivo" style="display: none;">
+                            
+                            <!-- Botón de imagen personalizado -->
+                            <label for="file-upload">
+                                <img src="Imagenes/icons8-subir-100.png" alt="Seleccionar archivo" class="img-button" >
+                            </label>
+                            <br>
+                            <!-- Botón de envío del formulario -->
+                            <button type="submit"> 
+                                Cargar Minuta
+                            </button>
+                        </form>
                     </div>
-                    <div class="overview_card">
-                        <button class="overview_card-info">Analisis 3</button>
-                        <div class="overview_card-icon">Info Analisis 3</div>
-                    </div>
-                    <div class="overview_card">
-                        <button class="overview_card-info">Analisis 4</button>
-                        <div class="overview_card-icon">Info Analisis 4</div>
-                    </div>
+                    <!-- <div class="card">Card</div> -->
                 </div>
             </main>
             <footer class="footer">

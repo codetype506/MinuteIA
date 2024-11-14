@@ -4,14 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
-        <link rel="stylesheet" type="text/css" href="style/uploadStyle.css">
+        <link rel="stylesheet" type="text/css" href="style/editStyle.css">
         <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
     </head>
     <body>
         <div class="grid-container">
-            <!-- <div class="menu-icon">
+            <div class="menu-icon">
                 <strong> &#9776;</strong>
-            </div> -->
+            </div>
             <header class="header">
                 <div class="header_search">
                     <input type="text" placeholder="Buscador">
@@ -37,7 +37,7 @@
                         <a href="uploadMinuta.html">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Edicion de Minuta</a>
+                        <a href="editMinuta.html">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="analisisMinuta.html">Seleccion de Analisis</a>
@@ -59,9 +59,12 @@
             <main class="main">
                 <div class="main_cards">
                     <div class="card">
-                        <span>Minuta</span>
-                       <textarea id="trascripMinuta" name="trascripMinuta" rows="48" cols="155" disabled>
-                        </textarea> 
+                        <span>Documentos Adicionales</span>
+                        <div id="document-container">
+
+                        </div> 
+                        
+                       
                     </div>
                     <div class="card">
                         <form action="/ruta" method="POST" enctype="multipart/form-data">
@@ -75,11 +78,10 @@
                             <br>
                             <!-- Botón de envío del formulario -->
                             <button type="submit"> 
-                                Cargar Archivo
+                                Cargar Documentos
                             </button>
                         </form>
                     </div>
-                    <!-- <div class="card">Card</div> -->
                 </div>
             </main>
             <footer class="footer">
@@ -87,5 +89,6 @@
                 <div class="footer_byline">Made with &hearts;</div> -->
             </footer>
         </div>
+        <script type="text/javascript" src="JS/editJS.js"></script>
     </body>
 </html>

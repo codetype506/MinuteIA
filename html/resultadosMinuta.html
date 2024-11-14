@@ -4,11 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
-        <!-- <link rel="stylesheet" type="text/css" href="style/analisisStyle.css"> -->
         <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
+        <!-- <link rel="stylesheet" type="text/css" href="style/realTimeStyle.css"> -->
     </head>
     <body>
         <div class="grid-container">
+            <div class="menu-icon">
+                <strong> &#9776;</strong>
+            </div>
             <header class="header">
                 <div class="header_search">
                     <input type="text" placeholder="Buscador">
@@ -34,7 +37,7 @@
                         <a href="uploadMinuta.html">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Edicion de Minuta</a>
+                        <a href="editMinuta.html">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="analisisMinuta.html">Seleccion de Analisis</a>
@@ -54,19 +57,25 @@
                 </ul>
             </aside>
             <main class="main">
-                <div id="main_overview" class="main_overview">
-                    <!-- <div class="overview_card">
-                        <div class="overview_card-info">historial 0</div>
-                        <div class="overview_card-icon">Card</div> 
+                <div class="main_cards">
+                    <div class="card">
+                        <span>Documento</span>
+                       <textarea id="trascripMinuta" name="trascripMinuta" rows="48" cols="150" disabled>
+                        </textarea> 
+                    </div>
+                    <!-- <div class="card">
+                        <form action="/ruta" method="POST">
+                            <input type="image" src="Imagenes/icons8-subir-100.png" alt="Enviar" class="img-button">
+                        </form>
+                        
                     </div> -->
-                
-                    
+                    <!-- <div class="card">Card</div> -->
                 </div>
             </main>
-
             <footer class="footer">
+                <!-- <div class="footer_copyright">&copy;2020</div>
+                <div class="footer_byline">Made with &hearts;</div> -->
             </footer>
         </div>
-        <script type="text/javascript" src="JS/historialJS.js"></script>
     </body>
 </html>

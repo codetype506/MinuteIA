@@ -4,12 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SoftMinuta IA</title>
-        <!-- <link rel="stylesheet" type="text/css" href="style/mainHubStyle.css"> -->
+        <link rel="stylesheet" type="text/css" href="style/realTimeStyle.css">
         <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
     </head>
     <body>
         <div class="grid-container">
-           
+            <div class="menu-icon">
+                <strong> &#9776;</strong>
+            </div>
             <header class="header">
                 <div class="header_search">
                     <input type="text" placeholder="Buscador">
@@ -35,7 +37,7 @@
                         <a href="uploadMinuta.html">Cargar Minuta</a>
                     </li>
                     <li class="aside_list-item" >
-                        <a href="editMinuta.html">Edicion de Minuta</a>
+                        <a href="editMinuta.html">Documento Adicional</a>
                     </li>
                     <li class="aside_list-item" >
                         <a href="analisisMinuta.html">Seleccion de Analisis</a>
@@ -55,32 +57,20 @@
                 </ul>
             </aside>
             <main class="main">
-                <div class="main_overview">
-                    <div class="overview_card">
-                        <div class="overview_card-info">Minuta en Tiempo Real</div>
-                        <!-- <div class="overview_card-icon">Card</div> -->
+                <div class="main_cards">
+                    <div class="card">
+                        <span>Transcripcion en Tiempo Real</span>
+                        <textarea id="trascripMinuta" name="trascripMinuta" rows="48" cols="150" disabled>
+                        </textarea>
                     </div>
-                    <div class="overview_card">
-                        <div class="overview_card-info">Edicion de Minuta</div>
-                        <!-- <div class="overview_card-icon">Card</div> -->
+                    <div class="card">
+                        <form action="/ruta" method="POST">
+                            <input type="image" src="Imagenes/icons8-grabar-100.png" alt="Enviar" class="img-button">
+                        </form>
+                        
                     </div>
-                    <div class="overview_card">
-                        <div class="overview_card-info">Analisis de Minuta</div>
-                        <!-- <div class="overview_card-icon">Card</div> -->
-                    </div>
-                    <div class="overview_card">
-                        <div class="overview_card-info">Resultados de Minuta</div>
-                        <!-- <div class="overview_card-icon">Card</div> -->
-                    </div>
-                
-                    
+                    <!-- <div class="card">Card</div> -->
                 </div>
-
-                <!-- <div class="main_cards">
-                    <div class="card">Card</div>
-                    <div class="card">Card</div>
-                    <div class="card">Card</div> 
-                </div> -->
             </main>
             <footer class="footer">
                 <!-- <div class="footer_copyright">&copy;2020</div>
