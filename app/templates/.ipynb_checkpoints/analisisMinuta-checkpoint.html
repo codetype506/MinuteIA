@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SoftMinuta IA</title>
+        <!-- <link rel="stylesheet" type="text/css" href="style/analisisStyle.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/analisisStyle.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/mainStyle.css') }}">
+    </head>
+    <body>
+        <div class="grid-container">
+            <!-- <div class="menu-icon">
+                <strong> &#9776;</strong>
+            </div> -->
+            <header class="header">
+                <div class="header_search">
+                    <input type="text" placeholder="Buscador">
+                </div>
+                <div class="header_logout">
+                    <a href="login.html">
+                        <img src="{{ url_for('static', filename='Imagenes/icons8-cerrar-sesión-24.png') }}" alt="Logout" >
+                    </a>
+                </div>
+            </header>
+            <aside class="aside">
+                <div class="aside_close-icon">
+                    <strong>&times;</strong>
+                </div>
+                <ul class="aside_list">
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('mainHub') }}">Inicio</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('realTime') }}">Tiempo Real Minuta</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('upload') }}">Cargar Minuta</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('docExtra') }}">Documento Adicional</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('analisis') }}">Seleccion de Analisis</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('resultados') }}">Resultados</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('historial') }}">Historial</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('help') }}">Ayuda</a>
+                    </li>
+                    <li class="aside_list-item" >
+                        <a href="{{ url_for('configMinuta') }}">Configuraciones</a>
+                    </li>
+                </ul>
+            </aside>
+            <main class="main">
+                <div class="main_overview">
+                    <div class="overview_card">
+                        <button class="overview_card-info">Sentimientos</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
+                    <div class="overview_card">
+                        <button class="overview_card-info">Ideas Principales</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
+                    <div class="overview_card">
+                        <button class="overview_card-info">Resumen Abstracto</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
+                    <div class="overview_card">
+                        <button class="overview_card-info">Elementos de Accion</button>
+                        <div class="overview_card-icon">Info Analisis </div>
+                    </div>
+                </div>
+                
+            </main>
+            <footer class="footer">
+                <!-- <div class="footer_copyright">&copy;2020</div>
+                <div class="footer_byline">Made with &hearts;</div> -->
+            </footer>
+        </div>
+        
+    </body>
+</html>
